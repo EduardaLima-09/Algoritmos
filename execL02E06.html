@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 02 - Exercicio 06</title>
+</head>
+<body>
+    <h2>Controle FAROL</h2>
+    <button onclick="pare()">Pare</button>
+    <button onclick="pense()">Pense</button>
+    <button onclick="siga()">Siga</button>
+    <div id="div_msg">Situação do Farol</div>
+</body>
+<script>
+    function pare () {
+        div_msg.innerHTML = "Pare e aguarde!"
+    }
+
+    function pense () {
+        div_msg.innerHTML = "Pense se pode seguir ou se deve parar!"
+    }
+
+    function siga () {
+        div_msg.innerHTML = "Pode seguir adiante"
+    }
+
+</script>
+</html>
