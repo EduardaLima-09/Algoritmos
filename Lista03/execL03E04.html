@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03 - Exercicio 04</title>
+</head>
+<body>
+    <h1>Todo mundo ama PIZZA!</h1>
+    Quanto custa a pizza?: <input id="ipt_pizza"> <br>
+    Quantos amigos são?: <input id="ipt_amigos"> <br><br>
+    <button onclick="calcular()">#IlovePizza</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function calcular() {
+        var ax_valor = Number(ipt_pizza.value);
+        var ax_amigos = Number(ipt_amigos.value);
+
+        var ax_conta = ax_valor / ax_amigos;
+
+        div_msg.innerHTML = 'Cada um dos ' + ax_amigos + ' amigos vai pagar R$ ' + ax_conta 
+
+        ipt_amigos.value = '',
+        ipt_pizza.value = '';
+    }
+</script>
+</html>

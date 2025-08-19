@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03 - Exercicio 03</title>
+</head>
+<body>
+    <h1>Calculadora Divisão</h1>
+    Entre com o primeiro número: <input id="ipt_num1"> <br>
+    Entre com o segundo número: <input id="ipt_num2"> <br><br>
+    <button onclick="quociente()">Quociente</button>
+    <button onclick="resto()">Resto</button>
+    <button onclick="completo()">Completo</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function quociente() {
+        var ax_num1 = Number(ipt_num1.value);
+        var ax_num2 = Number(ipt_num2.value);
+
+        var ax_result = ax_num1 / ax_num2;
+
+        div_msg.innerHTML = 'A divisão de ' + ax_num1 + ' por ' + ax_num2 + ' é: ' + ax_result + ', sendo que '
+            + ax_num1 + ' é o primeiro número recebido, ' + ax_num2 + ' é o segundo e ' + ax_num2 + ' é o quociente da divisão.'
+    
+        ipt_num1.value = '';
+        ipt_num2.value = '';
+    }
+
+    function resto() {
+        var ax_num1 = Number(ipt_num1.value);
+        var ax_num2 = Number(ipt_num2.value);
+
+        var ax_rest = ax_num1 % ax_num2;
+
+        div_msg.innerHTML = 'O Resto da divisão de ' + ax_num1 + ' por ' + ax_num2 + ' é: ' + ax_rest + ', sendo que '
+            + ax_num1 + ' é o primeiro número recebido, ' + ax_num2 + ' é o segundo e ' + ax_rest + ' é o resto da divisão.'
+        
+        ipt_num1.value = '';
+        ipt_num2.value = '';
+    }
+
+        function completo() {
+        var ax_num1 = Number(ipt_num1.value);
+        var ax_num2 = Number(ipt_num2.value);
+
+        var ax_div = ax_num1 / ax_num2;
+        var ax_rest = ax_num1 % ax_num2;
+
+        div_msg.innerHTML = 'A Divisão de ' + ax_num1 + ' por ' + ax_num2 + ' é: ' + ax_div + ', sendo que '
+            + ax_num1 + ' é o primeiro número recebido, ' + ax_num2 + ' é o segundo, ' + ax_num2 + ' é o quociente, e o ' + ax_rest + ' é o resto da divisão.'
+        
+        ipt_num1.value = '';
+        ipt_num2.value = '';
+    }
+</script>
+</html>

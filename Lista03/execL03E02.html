@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03 - Exercicio 02</title>
+</head>
+<body>
+    <h1>Aposentadoria, Quanto Falta?</h1>
+    Informe sua idade: <input id="ipt_idade"> <br><br>
+    <button onclick="mulher()">Sou Mulher</button>
+    <button onclick="homem()">Sou Homem</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function mulher() {
+        var ax_idade = Number(ipt_idade.value);
+
+        var ax_tempo = 60 - ax_idade;
+        var ax_resultado = ax_tempo;
+
+        div_msg.innerHTML = 'Faltam ' + ax_tempo + ' anos' + ' para você se aposentar'
+
+        ipt_num1.value = '';
+        ipt_num2.value = '';
+    }
+
+    function homem() {
+        var ax_idade = Number(ipt_idade.value);
+
+        var ax_tempo = 70 - ax_idade;
+        var ax_resultado = ax_tempo;
+
+        div_msg.innerHTML = 'Faltam ' + ax_tempo + ' anos' + ' para você se aposentar'
+
+        ipt_num1.value = '';
+        ipt_num2.value = '';
+    }
+</script>
+</html>

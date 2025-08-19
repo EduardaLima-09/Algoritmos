@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04</title>
+</head>
+
+<!-- 
+Variável é um ponteiro para um espaço da memória que armazena temporariamente 
+algum valor. 
+Em outras palavras, as variáveis são um espaço identificado da memória para
+guardar alguma informação. As variáveis funcionam como campos ou áreas 
+adicionais para armazenar algum valor.
+
+EXEMPLO:        var nome_aluno = ‘Frizza’;     onde 
+    var ==> é como inicialmente iremos declarar as variáveis,
+    nome_aluno ==> é a identificação (nome) da variável e 
+    ‘Frizza’ ==> foi o valor atribuído para a variável nome_aluno
+
+Regras para dar nome para as variáveis:
+    NÃO começar com número, mas pode ter número no meio ou fim
+    NÃO pode ter espaço em branco
+    NÃO usar nomes de tags (body, h3, img, div etc)
+    NÃO usar caracteres especiais (acentos, cedilha, etc)
+    NÃO usar o mesmo nome para mais de uma variáve dentro da mesma função
+-->
+<body>
+    <h2>Cadastro de Alunos</h2>
+    Entre com o Primeiro nome do aluno: <input id="ipt_primeiro_nome"> <br>
+    Entre com o Segundo nome do aluno: <input id="ipt_segundo_nome"> <br>
+    <button onclick="cadastrar()">Cadastrar</button> 
+    <br><br>
+    Lista Completa
+    <div id="div_msg"></div>
+</body>
+<script>
+function cadastrar() {
+    var ax_nome = '';
+
+    ax_nome = ipt_primeiro_nome.value + " " + ipt_segundo_nome.value;
+    
+    div_msg.innerHTML = ax_nome;
+
+    ipt_primeiro_nome.value = '';
+    ipt_segundo_nome.value = '';
+}
+
+</script>
+</html>

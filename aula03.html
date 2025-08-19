@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03</title>
+</head>
+<body>
+    <h2>Lista de Alunos</h2>
+    Entre com o Primeiro nome do aluno: <input id="ipt_texto"> <br>
+    <button onclick="mudar()">Mudar a Div</button> 
+    <button onclick="incrementar()">Incrementar na Div</button> 
+    <button onclick="limpar()">Limpar a Div</button> <br><br>
+    Lista Completa
+    <div id="div_msg"></div>
+</body>
+<script>
+
+// A função abaixo irá mudar o conteúdo do corpo da tag do HTML, 
+// ou seja, tudo o que está no corpo da tag será alterado pelo 
+// conteúdo do ipt_texto.value
+function mudar() {
+    div_msg.innerHTML = ipt_texto.value;
+    ipt_texto.value = '';  // limpar o conteúdo da input
+}
+
+
+
+/* A função abaixo ira adicionar o conteúdo do ipt_texto.value
+   no corpo da tag div_msg, ou seja, tudo o que está no corpo 
+   da tag permanece e é somente adicionado o conteúdo do 
+   ipt_texto.value   */
+function incrementar() {
+    div_msg.innerHTML += '<br>' + ipt_texto.value;
+    ipt_texto.value = '';
+}
+
+
+// A função abaixo irá apagar todo o conteúdo do corpo da tag do
+// HTML deixando-a vazia.
+function limpar() {
+    div_msg.innerHTML = '';
+    ipt_texto.value = '';
+}
+</script>
+</html>

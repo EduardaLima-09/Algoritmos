@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 02 - Exercicio 03</title>
+</head>
+<body>
+    <h2>Futebol</h2>
+    Entre como o nome do seu time: <input id="ipt_time"> <br>
+    Entre com a quantidade de titulos do seu time: <input id="ipt_qtdTitulo"> <br>
+    <button onclick="futebol()">Amo meu time</button>
+    <div id="div_msg">Situação</div>
+</body>
+<script>
+    function futebol () {
+        div_msg.innerHTML = "O time " +  ipt_time.value +  " tem " +  ipt_qtdTitulo.value + " títulos"
+    }
+</script>
+</html>

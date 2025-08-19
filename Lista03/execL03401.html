@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03 - Exercicio 01</title>
+</head>
+<body>
+    <h1>Calculadora Básica</h1>
+    Entre com o primeiro número: <input id="ipt_num1"> <br>
+    Entre com o segundo número: <input id="ipt_num2"> <br><br>
+    <button onclick="somar()">Soma</button>
+    <button onclick="subtrair()">Subtração</button>
+    <button onclick="multiplicar()">Multiplicação</button>
+    <button onclick="dividir()">Divisão</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function somar() {
+        var ax_num1 = Number(ipt_num1.value);
+        var ax_num2 = Number(ipt_num2.value);
+
+        var ax_resultado = ax_num1 + ax_num2;
+
+        div_msg.innerHTML = 'O Resultado da soma de ' + ax_num1 + ' com ' + ax_num2 + ' é: ' + ax_resultado
+
+        ipt_num1.value = '';
+        ipt_num2.value = '';
+    }
+
+    function subtrair() {
+        var ax_num1 = Number(ipt_num1.value);
+        var ax_num2 = Number(ipt_num2.value);
+
+        var ax_resultado = ax_num1 - ax_num2;
+
+        div_msg.innerHTML = 'O Resultado da subtração de ' + ax_num1 + ' com ' + ax_num2 + ' é: ' + ax_resultado
+
+        ipt_num1.value = '';
+        ipt_num2.value = '';
+    }
+
+    function multiplicar() {
+        var ax_num1 = Number(ipt_num1.value);
+        var ax_num2 = Number(ipt_num2.value);
+
+        var ax_resultado = ax_num1 * ax_num2;
+
+        div_msg.innerHTML = 'O Resultado da subtração de ' + ax_num1 + ' com ' + ax_num2 + ' é: ' + ax_resultado
+
+        ipt_num1.value = '';
+        ipt_num2.value = '';
+    }
+
+    function dividir() {
+        var ax_num1 = Number(ipt_num1.value);
+        var ax_num2 = Number(ipt_num2.value);
+
+        var ax_resultado = ax_num1 / ax_num2;
+
+        div_msg.innerHTML = 'O Resultado da subtração de ' + ax_num1 + ' com ' + ax_num2 + ' é: ' + ax_resultado
+
+        ipt_num1.value = '';
+        ipt_num2.value = '';
+    }
+</script>
+</html>
