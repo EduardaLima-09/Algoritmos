@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03 - Exercicio 10</title>
+</head>
+
+<body>
+    <h1>Dividindo a pizza e a caixinha do entregador</h1>
+    Sabor da pizza: <input id="ipt_saborPizza"> <br>
+    Valor da pizza: <input id="ipt_valorPizza"> <br>
+    Quantos amigos vão comer: <input id="ipt_amigos"> <br><br>
+    <button onclick="valor()">Ver valor por amigo</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function valor() {
+        var sabor = ipt_saborPizza.value;
+        var valor = Number(ipt_valorPizza.value);
+        var amigos = Number(ipt_amigos.value);
+
+        valor_total = valor * 1.10;
+
+        var conta = (valor_total / amigos);
+
+        div_msg.innerHTML = 'Cada amigo vai colaborar com R$' + conta.toFixed(2) + ' para a pizza de R$' + valor.toFixed(2) + ' na pizza de ' + sabor
+    }
+</script>
+
+</html>

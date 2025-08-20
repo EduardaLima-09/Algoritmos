@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03 - Exercicio 12</title>
+</head>
+<body>
+    <h1>O Ki dos Sayajins!</h1>
+    Ki base do guerreiro Sayajin: <input id="ipt_ki_base"> <br>
+    Transformar em... <br>
+    <button onclick="ssj()">SSJ</button>
+    <button onclick="ssj2()">SSJ2</button>
+    <button onclick="ssj3()">SSJ3</button>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function ssj() {
+        var base = Number(ipt_ki_base.value);
+        var nova_base = base * 50;
+
+        div_msg.innerHTML = 'Após se transformar em SSJ ' + base + ' o ki desse Sayajin passa a ser de ' + nova_base
+    }
+
+    function ssj2() {
+        var base = Number(ipt_ki_base.value);
+        var nova_base = base * 100;
+
+        div_msg.innerHTML = 'Após se transformar em SSJ2 ' + base + ' o ki desse Sayajin passa a ser de ' + nova_base
+    }
+
+    function ssj3() {
+        var base = Number(ipt_ki_base.value);
+        var nova_base = base * 200;
+
+        div_msg.innerHTML = 'Após se transformar em SSJ3 ' + base + ' o ki base desse Sayajin passa a ser de ' + nova_base
+    }
+</script>
+</html>

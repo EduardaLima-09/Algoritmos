@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03 - Exercicio 05</title>
+</head>
+<body>
+    <h1>Economia com o Bilhete Estudante</h1>
+    Qual o valor da passagem? <input id="ipt_passagem"> <br>
+    Quantas viagens por mês? <input id="ipt_viagens"> <br><br>
+    <button onclick="economia()">Ver economia</button>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function economia() {
+        var ax_pass = Number(ipt_passagem.value);
+        var ax_vgm = Number(ipt_viagens.value);
+
+        var ax_economia = ax_pass + ax_vgm * 0.5;
+
+        div_msg.innerHTML = 'Você economizará R$ ' + ax_economia + ' por mês'
+    }
+</script>
+</html>

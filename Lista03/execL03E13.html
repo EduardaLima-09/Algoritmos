@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03 - Exercicio 13</title>
+</head>
+
+<body>
+    <h1>Cálculo do Vale Transporte</h1>
+
+    Valor da passagem de ônibus: <input id="ipt_passagem"><br>
+    Quantidade de viagens por mês: <input id="ipt_viagens"><br>
+    Distância de casa até o trabalho (km): <input id="ipt_distancia"><br><br>
+    <button onclick="calcular()">Calcular VT</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+
+<script>
+    function calcular() {
+        var valor_passagem = Number(ipt_passagem.value);
+        var qtd_viagens = Number(ipt_viagens.value);
+        var distancia = Number(ipt_distancia.value);
+
+        var viagens_uber = qtd_viagens * 0.10; // 10% das viagens
+        var viagens_onibus = qtd_viagens - viagens_uber;
+
+        var custo_uber = viagens_uber * distancia * 0.75;
+        var custo_onibus = viagens_onibus * valor_passagem;
+
+        var total = custo_onibus + custo_uber;
+
+        div_msg.innerHTML = "Você vai gastar R$" + total.toFixed(2) + " por mês com transporte.";
+    }
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03 - Exercicio 07</title>
+</head>
+<body>
+    <h1>Cálculo da média da SPTech</h1>
+    Seu nome? <input id="ipt_nome"> <br>
+    Qual sua nota de continuada? <input id="ipt_continuada"> <br>
+    Qual sua nota semestral <input id="ipt_semestral"> <br>
+    <button onclick="media()">Calcular média</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function media() {
+        var ax_cont = Number(ipt_continuada.value);
+        var ax_sem = Number(ipt_semestral.value);
+        var ax_nome = ipt_nome.value;
+
+        var ax_s1 = ax_cont * 0.4;
+        var ax_s2 = ax_sem * 0.6;
+
+        var soma = ax_s1 + ax_s2;
+
+        div_msg.innerHTML = 'A média de ' + ax_nome + ' será de ' + soma  
+    }
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03 - Exercicio 09</title>
+</head>
+
+<body>
+    <h1>Eleição</h1>
+    Quantos votos o candidato A teve? <input id="ipt_cad_a"> <br>
+    Quantos votos o candidato B teve? <input id="ipt_cad_b"> <br>
+    Quantos votos brancos? <input id="ipt_branco"> <br>
+    Quantos votos nulos? <input id="ipt_nulo"> <br><br>
+    <button onclick="eleicao()">Resultado da Eleição</button><br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function eleicao() {
+
+        var candidato_a = Number(ipt_cad_a.value);
+        var candidato_b = Number(ipt_cad_b.value);
+        var voto_branco = Number(ipt_branco.value);
+        var voto_nulo = Number(ipt_nulo.value);
+
+        var soma = candidato_a + candidato_b + voto_branco + voto_nulo;
+
+        div_msg.innerHTML = 'Resultado:<br>' +
+            'Total de votos: ' + soma + '<br>' +
+            'Candidato A: ' + (candidato_a / soma * 100).toFixed(1) + '% votos.<br>' +
+            'Candidato B: ' + (candidato_b / soma * 100).toFixed(1) + '% votos.<br>' +
+            'Inválidos: ' + (voto_branco + voto_nulo).toFixed(1) + ' % votos.'
+
+    }
+</script>
+
+</html>

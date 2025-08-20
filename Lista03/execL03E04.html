@@ -9,7 +9,7 @@
     <h1>Todo mundo ama PIZZA!</h1>
     Quanto custa a pizza?: <input id="ipt_pizza"> <br>
     Quantos amigos são?: <input id="ipt_amigos"> <br><br>
-    <button onclick="calcular()">#IlovePizza</button> <br><br>
+    <button onclick="calcular()">#lovePizza</button> <br><br>
     <div id="div_msg"></div>
 </body>
 <script>
@@ -19,7 +19,7 @@
 
         var ax_conta = ax_valor / ax_amigos;
 
-        div_msg.innerHTML = 'Cada um dos ' + ax_amigos + ' amigos vai pagar R$ ' + ax_conta 
+        div_msg.innerHTML = 'Cada um dos ' + ax_amigos + ' amigos vai pagar R$ ' + ax_conta.toFixed(1);
 
         ipt_amigos.value = '',
         ipt_pizza.value = '';
