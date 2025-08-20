@@ -19,7 +19,8 @@
         var ax_num1 = Number(ipt_num1.value);
         var ax_num2 = Number(ipt_num2.value);
 
-        var ax_result = ax_num1 / ax_num2;
+        var ax_rest = ax_num1 % ax_num2;
+        var ax_result = (ax_num1 - ax_rest) / ax_num2;
 
         div_msg.innerHTML = 'A divisão de ' + ax_num1 + ' por ' + ax_num2 + ' é: ' + ax_result + ', sendo que '
             + ax_num1 + ' é o primeiro número recebido, ' + ax_num2 + ' é o segundo e ' + ax_num2 + ' é o quociente da divisão.'
@@ -45,8 +46,8 @@
         var ax_num1 = Number(ipt_num1.value);
         var ax_num2 = Number(ipt_num2.value);
 
-        var ax_div = ax_num1 / ax_num2;
         var ax_rest = ax_num1 % ax_num2;
+        var ax_div = (ax_num1 - ax_rest) / ax_num2;
 
         div_msg.innerHTML = 'A Divisão de ' + ax_num1 + ' por ' + ax_num2 + ' é: ' + ax_div + ', sendo que '
             + ax_num1 + ' é o primeiro número recebido, ' + ax_num2 + ' é o segundo, ' + ax_num2 + ' é o quociente, e o ' + ax_rest + ' é o resto da divisão.'
