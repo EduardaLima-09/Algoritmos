@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula06</title>
+</head>
+<body>
+    <h2>Tratando Variável Global</h2>
+    Valor da economia: <input id="ipt_econ">
+    <button onclick="contar()">Click nimim</button> <br><br>
+    <button onclick="resetar()">Começar novamente</button> <br><br>
+    Você clicou <b id="b_cont">0</b> vezes e economizou R$ <i id="i_econ"></i>
+</body>
+<script>
+/* 
+    A variável criada fora de uma função é chamada de VARIÁVEL GLOBAL.
+
+    Ela é criada imediatamente quando a página é carregada.
+    
+    A VARIÁVEL GLOBAL deve ser usada quando:
+        O seu valor é COMPARTILHADO com outras funções;
+        Quando o seu valor deve persistir mesmo quando a função é encerrada. 
+    
+    NÃO devemor criar variáveis locais com o mesmo nome da variável Global
+*/
+
+
+    var ax_contador = 0;
+    var ax_econ = 0
+
+
+    function contar() {
+        ax_contador = ax_contador + 1;
+        ax_econ = ax_econ + Number(ipt_econ.value);
+        b_cont.innerHTML = ax_contador;
+        i_econ.innerHTML = ax_econ;
+    }
+
+    function resetar() {
+        ax_contador = 0;
+        ax_econ = 0;
+    }
+</script>
+</html>
