@@ -25,12 +25,13 @@
         var voto_nulo = Number(ipt_nulo.value);
 
         var soma = candidato_a + candidato_b + voto_branco + voto_nulo;
+        var votos_invalidos = voto_branco + voto_nulo;
 
         div_msg.innerHTML = 'Resultado:<br>' +
             'Total de votos: ' + soma + '<br>' +
-            'Candidato A: ' + (candidato_a / soma * 100).toFixed(1) + '% votos.<br>' +
-            'Candidato B: ' + (candidato_b / soma * 100).toFixed(1) + '% votos.<br>' +
-            'Inválidos: ' + (voto_branco + voto_nulo).toFixed(1) + ' % votos.'
+            'Candidato A: ' + (candidato_a / soma * 100).toFixed(1) + '%  ' + candidato_a + ' votos <br>' +
+            'Candidato B: ' + (candidato_b / soma * 100).toFixed(1) + '%  ' + candidato_b + ' votos <br>' +
+            'Inválidos: ' + (voto_branco + voto_nulo).toFixed(1) + ' %  ' + votos_invalidos + ' votos.'
 
     }
 </script>
