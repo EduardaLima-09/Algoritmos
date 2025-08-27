@@ -23,10 +23,10 @@
         var qtd_viagens = Number(ipt_viagens.value);
         var distancia = Number(ipt_distancia.value);
 
-        var viagens_uber = qtd_viagens * 0.10; // 10% das viagens
+        var viagens_uber = qtd_viagens * 10/100; // 10% das viagens
         var viagens_onibus = qtd_viagens - viagens_uber;
 
-        var custo_uber = viagens_uber * distancia * 0.75;
+        var custo_uber = viagens_uber * distancia * 0.75/10;
         var custo_onibus = viagens_onibus * valor_passagem;
 
         var total = custo_onibus + custo_uber;
