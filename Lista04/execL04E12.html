@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 12</title>
+</head>
+<body>
+    <h1>Análise CNH</h1>
+    Seu nome: <input id="ipt_nome"> <br>
+    Entre com a idade: <input id="ipt_idade"> <br>
+    <button onclick="avaliar()">Avaliar aluno</button>
+</body>
+<script>
+    function avaliar () {
+        var ax_nome = ipt_nome.value;
+        var ax_idade = Number(ipt_idade.value);
+
+        if (ax_idade >= 18 ) {
+            alert (ax_nome + ', vamos tirar a CNH?')
+        } else {
+            alert (ax_nome + ' vai jogar PlayStation!')
+        }
+
+    }
+</script>
+</html>

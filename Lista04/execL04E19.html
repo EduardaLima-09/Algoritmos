@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 19</title>
+</head>
+<body>
+    <h2>Mercado BOM DOCE</h2>
+    Quantidade de chocolates comprados: <input id="ipt_chocolate"> <br>
+    <button onclick="comprar()">Compra</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function comprar() {
+        var ax_chocolate = Number(ipt_chocolate.value);
+
+         if (ax_chocolate >= 12) {
+
+            var conta = 2.50 * ax_chocolate;
+            div_msg.innerHTML = 'O valor da sua compra foi de R$' + conta.toFixed(1)
+            
+         } else {
+
+            var conta = 3.00 * ax_chocolate;
+            div_msg.innerHTML = 'O valor da sua compra foi de R$' + conta.toFixed(1)
+         }
+    }
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 22</title>
+</head>
+<body>
+    <h2>Análise de temperatura</h2>
+    Temperatura ambiente: <input id="ipt_temp"> <br>
+    <button onclick="clima()">Verificar clima</button>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function clima() {
+        var ax_temp = Number(ipt_temp.value);
+
+        if (ax_temp < 10) {
+            div_msg.innerHTML = '<img src="Alimento bom.png" style="width: 20%;">  Apropriada p/ conservar alimento'
+        } else {
+            div_msg.innerHTML = '<img src="Alimento ruim.png" style="width: 20%;">   Inapropriada p/ conservar alimento '
+        }
+    }
+</script>
+</html>

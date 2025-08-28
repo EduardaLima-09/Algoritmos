@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 15</title>
+</head>
+<body>
+    <h1>Análise da média de notas</h1>
+    Informe nota 1: <input id="ipt_nota1"> <br>
+    Informe nota 2: <input id="ipt_nota2"> <br>
+    <button onclick="verificar()">Verificar situação</button>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function verificar() {
+        var ax_nota1 = Number(ipt_nota1.value);
+        var ax_nota2 = Number(ipt_nota2.value);
+
+        var calc = (ax_nota1 + ax_nota2) / 2;
+
+        if (calc >= 6) {
+            alert ('Parabéns, aprovado!')
+        } else {
+            alert ('Tente outra vez...')
+        }
+
+    }
+</script>
+</html>

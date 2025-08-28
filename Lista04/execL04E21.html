@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 21</title>
+</head>
+<body>
+    <h2>Análise de frequência do aluno</h2>
+    Frequência do aluno: <input id="ipt_freq"> <br>
+    <button onclick="analisar()">Analisar frequência</button>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function analisar() {
+        var ax_frequencia = Number(ipt_freq.value);
+
+        if (ax_frequencia < 50) {
+            div_msg.innerHTML = '<img src="Turista.png" style="width: 20%;">' + 'Turista demais'
+        } else {
+            div_msg.innerHTML = '<img src="Estudioso.png" style="width: 20%;">' + 'Estudioso'
+        }
+    }
+</script>
+</html>

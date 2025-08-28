@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 10</title>
+</head>
+<body>
+    <h1>Controle de horas assistindo streaming</h1>
+    Informe a última série (SITCOM) que você assistiu: <input id="ipt_serie"> <br>
+    Total de episódios que você já assistiu da série: <input id="ipt_ep"> <br>
+    <button onclick="nivel()">Verificar nível</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function nivel() {
+        var ax_serie = ipt_serie.value;
+        var ax_ep = Number(ipt_ep.value);
+
+        var calc = 22 * ax_ep;
+        var horas = calc / 60;
+
+        div_msg.innerHTML = 'Vejo que você gosta da série ' + ax_serie
+
+        if (horas > 30 ) {
+            div_msg.innerHTML += ' Uau, você realmente gosta dessa série!'
+        }
+
+    }
+</script>
+</html>

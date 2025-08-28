@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 03</title>
+</head>
+<body>
+    <h1>Controle de notas</h1>
+    Entre com a nota 1: <input id="ipt_nota1"> <br>
+    Entre com a nota 2: <input id="ipt_nota2"> <br>
+    Entre com a nota 3: <input id="ipt_nota3"> <br><br>
+    <button onclick="desempenho()">Analisar desempenho</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function desempenho() {
+        var ax_nota1 = Number(ipt_nota1.value);
+        var ax_nota2 = Number(ipt_nota2.value);
+        var ax_nota3 = Number(ipt_nota3.value);
+
+        media = (ax_nota1 + ax_nota2 + ax_nota3) / 3;
+
+        div_msg.innerHTML = 'Sua média foi de: ' + media.toFixed(2)
+
+        if (media > 9.4) {
+            div_msg.innerHTML += ' Parabéns, você é fora de série!'
+        }
+    }
+</script>
+</html>

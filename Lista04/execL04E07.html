@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 07</title>
+</head>
+<body>
+    <h1>Financiamento da Casa própria</h1>
+    Valor da renda familiar: <input id="ipt_renda"> <br>
+    Valor da prestação: <input id="ipt_prestacao"> <br><br>
+    <button onclick="financiamento()">Verificar financiamento</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function financiamento() {
+        var ax_renda = Number(ipt_renda.value);
+        var ax_prestacao = Number(ipt_prestacao.value);
+
+        var financiar = (ax_prestacao/ax_renda) * 100;
+
+        div_msg.innerHTML = 'A prestação corresponde a ' + financiar.toFixed(1) + '% da renda familiar, '
+
+        if (financiar > 30 ) {
+            div_msg.innerHTML += '<b style="color: red;"> Será necessário complementar a renda familiar'
+        }
+    }
+</script>
+</html>

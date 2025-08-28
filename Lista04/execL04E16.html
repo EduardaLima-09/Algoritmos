@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 16</title>
+</head>
+<body>
+    <h1>Controle de peso no elevador - v2</h1>
+    Quantidade de homens que entraram no elevador: <input id="ipt_homens"> <br>
+    Quantidade de mulheres que entraram no elevador: <input id="ipt_mulheres"> <br>
+    <button onclick="ligar()">Ligar elevador</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function ligar() {
+        var ax_mulher = Number(ipt_mulheres.value);
+        var ax_homem = Number(ipt_homens.value);
+
+        var peso_total = (ax_mulher * 70) + (ax_homem * 90);
+        var peso_perder = peso_total - 500;
+
+        if (peso_total <= 500 ) {
+            div_msg.innerHTML = '<b style="color: green;"> Elevador vai se mover, pois está com ' + peso_total + ' kg'
+        }else {
+            div_msg.innerHTML = '<b style="color: red;"> Alguém precisa descer. Precisa perder ' + peso_perder + ' Kg para mover o elevador '
+        }
+
+    }
+</script>
+</html>

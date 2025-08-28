@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 06</title>
+</head>
+<body>
+    <h1>Conta de luz</h1>
+    Quantidade de KWh consumida no mês: <input id="ipt_kwh"> <br>
+    <button onclick="calcular()">Calcular conta de luz</button>
+</body>
+<script>
+    function calcular() {
+        var ax_luz = Number(ipt_kwh.value);
+
+        var valor_conta = ax_luz * 0.85;
+
+        if (ax_luz < 100 ) {
+            var economia = valor_conta * 0.10;
+            alert ('Valor desconto R$: ' + economia.toFixed(2))
+        }
+        alert ('Valor da conta de luz R$: ' + valor_conta.toFixed(2))
+    }
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 02</title>
+</head>
+<body>
+    <h1>Controle de Refrigerante</h1>
+    Quantas latinhas de refrigerante toma por dia : <input id="ipt_latinha_refri"> <br>
+    <button onclick="qtde()">Quantos refris</button>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function qtde () {
+        var ax_latinha = Number(ipt_latinha_refri.value);
+        mult = ax_latinha * 365;
+        div_msg.innerHTML = 'A quantidade de latinhas que ele consome por ano é: ' + ax_latinha 
+    
+        if (mult >= 500) {
+            div_msg.innerHTML += ' Cuidado com a Diabetes!' 
+        }
+
+    }
+</script>
+</html>

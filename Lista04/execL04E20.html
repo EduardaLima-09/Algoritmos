@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 20</title>
+</head>
+<body>
+    <h2>Análise de economia</h2>
+    Qual sua meta de economia: <input id="ipt_economia"> <br>
+    Quanto tem guardado: <input id="ipt_guardado"> <br><br>
+    <button onclick="economia()">Analisar economia</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function economia() {
+        var ax_economia = Number(ipt_economia.value);
+        var ax_guardado = Number(ipt_guardado.value);
+
+        var meta_ultrapassada = ax_guardado - ax_economia;
+        var falta = ax_economia - ax_guardado;
+
+        if (ax_guardado >= ax_economia) {
+            div_msg.innerHTML = 'Parabéns, meta alcançada!' + ', Meta ultrapassada em R$' + meta_ultrapassada.toFixed(1)
+        } else {
+            div_msg.innerHTML = 'Força! Ainda em busca da meta! Falta R$' + falta.toFixed(1)
+        }
+
+    }
+</script>
+</html>

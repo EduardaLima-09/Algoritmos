@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 13</title>
+</head>
+<body>
+    <h1>Análise da c/c (Conta Corrente)</h1>
+    Saldo da conta: <input id="ipt_conta"> <br>
+    Valor do débito: <input id="ipt_debito"> <br>
+    <button onclick="analisar()">Analisar conta</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function analisar() {
+        var ax_conta = Number(ipt_conta.value);
+        var ax_debito = Number(ipt_debito.value);
+
+        var valor_atual = ax_conta - ax_debito;
+        div_msg.innerHTML = '<b style="color: blue;"> O saldo atual da conta corrente é R$' + valor_atual.toFixed(1)
+
+        if (ax_debito >= ax_conta) {
+            div_msg.innerHTML = '<b style="color: red;"> O saldo atual da conta corrente é ' + valor_atual.toFixed(1)
+        }
+
+    }
+</script>
+</html>

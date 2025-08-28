@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 17</title>
+</head>
+<body>
+    <h1>Par ou Impar</h1>
+    Digite um número: <input id="ipt_numero"> <br>
+    <button onclick="analisar()">Analisar</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function analisar() {
+        var ax_numero = Number(ipt_numero.value);
+
+        if (ax_numero % 2 == 0 ) { // Quando o número pode ser dividido e o resto for igual a zero, ele é par
+            div_msg.innerHTML = '<b style = "Background-color: yellow; color: red;"> Esse número é PAR '
+        } else {
+            div_msg.innerHTML = '<b style = "color: blue;"> Esse número é impar '
+        }
+    }
+</script>
+</html>

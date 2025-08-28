@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 08</title>
+</head>
+
+<body>
+    <h1>Cheque especial</h1>
+    Saldo da conta: <input id="ipt_saldo"> <br>
+    Valor do débito: <input id="ipt_debito"> <br>
+    <button onclick="analisar()">Analisar conta</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function analisar() {
+        var ax_saldo = Number(ipt_saldo.value);
+        var ax_debito = Number(ipt_debito.value);
+
+        var sub = ax_saldo - ax_debito;
+        div_msg.innerHTML = 'O saldo atual da conta corrente é R$' + sub.toFixed(1)
+
+        if (ax_debito >= ax_saldo) {
+            div_msg.innerHTML = '<b style="color: red;"> O saldo atual da conta corrente é ' + sub
+        }
+
+    }
+</script>
+
+</html>

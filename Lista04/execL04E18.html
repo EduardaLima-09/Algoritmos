@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04 - Exercicio 18</title>
+</head>
+<body>
+    <h1>Teste de divisibilidade</h1>
+    Digite número 1: <input id="ipt_n1"> <br>
+    Digite número 2: <input id="ipt_n2"> <br>
+    <button onclick="testar()">Testar</button>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function testar() {
+        var ax_n1 = Number(ipt_n1.value);
+        var ax_n2 = Number(ipt_n2.value);
+
+        var dividir = ax_n1 / ax_n2;
+        var resto = ax_n1 % ax_n2;
+
+        if (resto == 0) {
+            div_msg.innerHTML = '<img src="Positivo.png" style="width: 20%;">'
+        } else {
+            div_msg.innerHTML = '<img src="Negativo.png" style="width: 20%;">'
+        }
+    }
+</script>
+</html>
