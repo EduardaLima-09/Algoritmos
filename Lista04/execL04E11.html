@@ -14,7 +14,19 @@
 <script>
     function analisar() {
         var ax_filhos = Number(ipt_filhos.value);
-
+        
+        if (ax_filhos >= 1) {
+            div_msg.innerHTML += 'Não tem TV<br>'
+        }
+        if (ax_filhos >=2) {
+            div_msg.innerHTML += 'Não tem internet<br>'
+        }
+        if (ax_filhos >= 3) {
+            div_msg.innerHTML += 'Não tem video game<br>'
+        }
+        if (ax_filhos >= 4) {
+            div_msg.innerHTML += 'Não tem Netflix<br>'            
+        }
         
     }
 </script>

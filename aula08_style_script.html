@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 exec 05..</title>
+</head>
+<body>
+    <h2>Rola Pizza?</h2>
+    Qual o valor da pizza: <input id="ipt_valor"> <br>
+    Qual a quantidade de amigos: <input id="ipt_qtde"> <br>
+    <button onclick="verificar()">Rola Pizza?</button> <br><br>
+    <div id="div_msg"></div>
+    
+</body>
+<script>
+    function verificar() {
+        var ax_valor = Number(ipt_valor.value) / Number(ipt_qtde.value);
+        div_msg.innerHTML = `Cada amigo vai pagar R$ ${ax_valor.toFixed(2)}X pela pizza`;
+        if (ax_valor > 20) {
+            div_msg.innerHTML += `<br><b><i style="color: red;">Deu ruim! Pizza muito cara!</i></b>`;
+        }
+    }
+</script>
+</html>
