@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint-1 - like prova - Atividade Avaliativa 3</title>
+</head>
+<body>
+    <h2>Controle Diário de Viagens</h2>
+    Diga a distância da corrida (Km): <input id="ipt_distancia"> <br>
+    Valor do pedágio: <input id="ipt_pedagio"> <br>
+    Bandeira (1, 2 ou 3): <input id="ipt_bandeira"> <br><br>
+    <button onclick="acumular()">Acumular corrida realizada</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    var corrida = 0;
+    var acumulado = 0;
+
+    function acumular() {
+        var ax_distancia = Number(ipt_distancia.value);
+        var ax_pedagio = Number(ipt_pedagio.value);
+        var ax_bandeira = Number(ipt_bandeira.value);
+
+        var valor_corrida = (ax_distancia / 8) * 10;
+        var desconto = valor_corrida * 0.1 + ax_pedagio;
+
+        if (ax_distancia > 50) {
+            valor_corrida *  0.9;
+            valor_corrida + ax_pedagio;
+        }
+        if (ax_bandeira == 2) {
+            valor_corrida * 0.117;
+        }
+        if (ax_bandeira == 3) {
+            valor_corrida * 0.223;
+        }
+
+        corrida++;
+        acumulado += valor_corrida;
+
+        div_msg.innerHTML += `${corrida};ª corrida de ${ax_distancia} km com valor de R$ ${valor_corrida.toFixed(2)} – ACUMULADO DO DIA R$ ${acumulado.toFixed(2)}<br>`;
+
+    }
+</script>
+</html>

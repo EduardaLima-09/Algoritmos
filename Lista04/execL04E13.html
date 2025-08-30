@@ -7,5 +7,23 @@
 </head>
 <body>
     <h1>Verificação das finanças</h1>
+    Valor do saldo da conta bancária: <input id="ipt_conta"> <br>
+    <button onclick="verificar()">Verificar Finanças</button>
+    <div id="div_msg"></div>
 </body>
+<script>
+    function verificar() {
+        var ax_conta = Number(ipt_conta.value);
+
+        if (ax_conta == 0) {
+            div_msg.innerHTML = '<b style="color: black;"> Conta zerada'
+        }
+        if (ax_conta < 0) {
+            div_msg.innerHTML = '<b style="color: red;"> Está devendo!'
+        }
+        if (ax_conta > 0) {
+            div_msg.innerHTML = '<b style="color: blue;"> Saldo positivo! sorriso'
+        }
+    }
+</script>
 </html>
