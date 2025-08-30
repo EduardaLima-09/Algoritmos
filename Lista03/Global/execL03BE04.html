@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03B - Exercicio 04</title>
+</head>
+<body>
+    <h2>Controle de TVM de caldeira de geração energia elétrica</h2>
+    Quantidade de dias de operação: <input id="ipt_dias"> <br><br>
+    <button onclick="processar()">Processar DIAS</button>
+    <button onclick="stopOperacao()">Stop Operação</button>
+    <button onclick="reiniciar()">Reiniciar Processo</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    var tvm_inicial = 1000;
+
+    function processar() {
+        var ax_dias = Number(ipt_dias.value);
+        var ax_horas = ax_dias * 24;
+        var tvm_anterior = tvm_inicial;
+        var ax_tvm = tvm_inicial - ax_horas;
+
+        tvm_inicial = ax_tvm;
+
+        div_msg.innerHTML += 
+            'O TVM anterior era de ' + tvm_anterior + 
+            ' horas, após ' + ax_dias + 
+            ' dias de operação o TVM passou para ' + ax_tvm + ' horas.<br>';
+    }
+
+    function stopOperacao() {
+        var tvm_anterior = tvm_inicial;
+        var ax_tvm = tvm_inicial - 100;
+
+        tvm_inicial = ax_tvm;
+
+        div_msg.innerHTML += 'O TVM anterior era de ' + tvm_anterior + ' horas, após o Stop de operação o TVM passou para ' + ax_tvm + ' horas.<br>';
+    }
+
+    function reiniciar() {
+        var tvm_anterior = tvm_inicial;
+        tvm_inicial = 1000;
+
+        div_msg.innerHTML = 'Ainda existia ' + tvm_anterior + ' horas, com o reinicio do processo o TVM passou para 1000 horas.<br>';
+    }
+</script>
+</html>

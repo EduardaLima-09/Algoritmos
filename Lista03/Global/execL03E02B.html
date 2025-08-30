@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03B - Exercicio 02</title>
+</head>
+<body>
+    <h2>Depósito e Retirada de dinheiro</h2>
+    Valor a ser depositado/retirado: <input id="ipt_valor">
+    <button onclick="depositar()">Depositar</button>
+    <button onclick="retirar()">Retirar</button>
+    <div id="div_msg"></div>
+</body>
+<script>
+    var ax_saldo = 0;
+
+    function depositar() {
+        var ax_valor = Number(ipt_valor.value);
+        ax_saldo = ax_saldo + ax_valor ;
+        div_msg.innerHTML += '<br> - Depósito de R$ ' + ax_valor + ' efetuado! Saldo atual: R$ ' + ax_saldo
+    }
+    
+    function retirar() {
+        var ax_valor = Number(ipt_valor.value);
+        ax_saldo = ax_saldo - ax_valor;
+        div_msg.innerHTML += '<br> - Retirada de R$ '+ ax_valor + ' efetuada! Saldo atual: R$ ' + ax_saldo
+    }
+
+    
+
+</script>
+</html>
