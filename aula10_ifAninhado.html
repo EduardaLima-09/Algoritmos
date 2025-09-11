@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10</title>
+</head>
+
+<body>
+    <h2>Coisas de IF</h2>
+    Informe a idade: <input id="iptIdade"> <br>
+    <button onclick="analisar()">Analisar</button>
+    <button onclick="analisarElseIf()">Else If</button>
+    <div id="divMsg"></div>
+</body>
+<script>
+    function analisar() {
+        divMsg.innerHTML = '';
+        if (iptIdade.value > 0) {
+            if (iptIdade.value >= 16) {
+                divMsg.innerHTML = "Já pode votar"
+                if (iptIdade.value >= 18) {
+                    divMsg.innerHTML += "<br>Já pode ter a CNH"
+                }
+            } else {
+                if (iptIdade.value >= 10) {
+                    divMsg.innerHTML += "Você é teen"
+                } else {
+                    divMsg.innerHTML += "Você é Kid"
+                }
+            }
+        } else {
+            alert('Entre com uma idade válida')
+        }
+        iptIdade.value = '';
+    }
+    
+    function analisarElseIf() {
+        divMsg.innerHTML = '';
+        if (iptIdade.value <= 0) {
+            alert('Entre com uma idade válida')
+        } else {
+            if (iptIdade.value >= 16) {
+                divMsg.innerHTML = "Já pode votar"
+                if (iptIdade.value >= 18) {
+                    divMsg.innerHTML += "<br>Já pode ter a CNH"
+                }
+            } else if (iptIdade.value >= 10) {
+                divMsg.innerHTML += "Você é teen"
+            } else {
+                divMsg.innerHTML += "Você é Kid"
+            }
+        }
+
+    }
+</script>
+
+</html>

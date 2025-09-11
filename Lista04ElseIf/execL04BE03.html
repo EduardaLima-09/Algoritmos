@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04B - Exercicio 03</title>
+</head>
+<body>
+    <h3>Sensação Térmica: Como o Corpo Humano Percebe a Temperatura</h3>
+    Temperatura corporal: <input id="iptTemperatura"> <br><br>
+    <button onclick="temperatura()">Temperatura do meu corpo</button> <br><br>
+    <div id="divMsg"></div>
+</body>
+<script>
+    function temperatura() {
+        var temperatura = Number(iptTemperatura.value);
+
+        if (temperatura <= 14) {
+            divMsg.innerHTML = 'Seu corpo está com ' + temperatura + ' C°, ' + ' Congelante (até menos de 14ºC)'
+        } else if (temperatura <= 21) {
+            divMsg.innerHTML = 'Seu corpo está com ' + temperatura + ' C°, ' + ' Com Frio (entre 14ºC e 21ºC)'
+        } else if (temperatura <= 24) {
+            divMsg.innerHTML = 'Seu corpo está com ' + temperatura + ' C°, ' + ' Confortável (mais de 21ºC até 24ºC)'
+        } else if (temperatura <= 31) {
+            divMsg.innerHTML = 'Seu corpo está com ' + temperatura + ' C°, ' + ' Com Calor (mais de 24ºC até 31ºC)'
+        } else {
+            divMsg.innerHTML = 'Seu corpo está com ' + temperatura + ' C°, ' + ' Calor escaldante (mais de 31ºC)'
+        }
+    }
+</script>
+</html>

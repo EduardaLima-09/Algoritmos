@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aninhamento de IF</title>
+</head>
+
+<body>
+    <h2>Controle de atacantes</h2>
+    Informe a quantidade de Partidas:
+    <input id="ipt_partidas"> <br><br>
+    Informe a quantidade de Gols:
+    <input id="ipt_gols"> <br><br>
+    <button onclick="estudar()">Estudar Atacante</button> <br><br>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+<script>
+    /* Observe que na função abaixo, no bloco do else foi inserido mais uma 
+       estrutura de decisão.
+
+       Esse é o conceito de ANINHAMENTO DE IF onde uma estrutura de decisão está
+       inserida em uma das saídas (verdadeira ou falsa) de outra estrutura de 
+       decisão.
+
+    function estudar() {
+        var ax_media = ipt_gols.value / ipt_partidas.value;
+        if (ax_media > 0.6) {
+            div_msg.innerHTML = `Atacante de futuro`;
+        } else {
+            if (ax_media < 0.2) {
+                div_msg.innerHTML = `Mudar de posição`;
+            } else {
+                div_msg.innerHTML = `Atacante Mediano`;
+            }
+        }
+        div_msg.innerHTML += `<br><br>Sua média de gols/partida é de ${ax_media.toFixed(2)}`;
+    }
+    */
+
+
+    /* Observe que na função abaixo, que o aninhamento ocorreu na saída verdadeira
+       do primeiro IF
+
+       Reforçando.... A aninhamento de IF pode ser feito tanto na condição
+       verdadeira como na condição falsa
+
+    function estudar() {
+        var ax_media = ipt_gols.value / ipt_partidas.value;
+        if (ax_media >= 0.2) {
+            if (ax_media > 0.6) {
+                div_msg.innerHTML = `Atacante de futuro`;
+            } else {
+                div_msg.innerHTML = `Atacante Mediano`;
+            }
+        } else {
+            div_msg.innerHTML = `Mudar de posição`;
+        }
+        div_msg.innerHTML += `<br><br>Sua média de gols/partida é de ${ax_media.toFixed(2)}`;
+    }
+    */
+
+
+    /* Observe que na função abaixo, o aninhamento de IF foi feito com
+       ELSE IF - essa é uma forma de codificação mais simples onde 
+       o aninhamento pela condição falsa fica com menos chaves abertas
+    */
+    function estudar() {
+        var ax_media = ipt_gols.value / ipt_partidas.value;
+        if (ax_media > 0.6) {
+            div_msg.innerHTML = `Atacante de futuro`;
+        } else if (ax_media < 0.2) {
+            div_msg.innerHTML = `Mudar de posição`;
+        } else {
+            div_msg.innerHTML = `Atacante Mediano`;
+        }
+        div_msg.innerHTML += `<br><br>Sua média de gols/partida é de ${ax_media.toFixed(2)}`;
+    }
+
+   
+   
+   
+    /* ATENÇÃO!!!Observe que na função abaixo, por conta do comando
+       da linha 97,  não é possível fazer o aninhamento de IF com o ELSE IF   
+
+        function estudar() {
+            var ax_media = ipt_gols.value / ipt_partidas.value;
+            if (ax_media > 0.6) {
+                div_msg.innerHTML = `Atacante de futuro`;
+            } else {
+                div_msg.innerHTML = 'Não achei o novo Pelé';
+                if (ax_media < 0.2) {
+                    div_msg.innerHTML += `<br>Mudar de posição`;
+                } else {
+                    div_msg.innerHTML += `<br>Atacante Mediano`;
+                }
+            }
+            div_msg.innerHTML += `<br><br>Sua média de gols/partida é de ${ax_media.toFixed(2)}`;
+        } 
+    */
+</script>

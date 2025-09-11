@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04B - Exercicio 12</title>
+</head>
+<body>
+    <h2>Resto da Divisão por 5</h2>
+    Entre com um número: <input id="iptNumero"> <br>
+    <button onclick="divisao()">Múltiplo de 5</button> <br><br>
+    <div id="divMsg"></div>
+</body>
+<script>
+    function divisao() {
+        var numero = Number(iptNumero.value);
+        var clNumero = numero % 5;
+
+        if (numero <= 0) {
+           alert('Digite um número maior que zero!') 
+        }
+
+        if (clNumero == 0) {
+            divMsg.innerHTML = 'Perfeito, esse número é múltiplo de cinco'
+        } else if (clNumero == 1) {
+            divMsg.innerHTML = 'Vich, sobrou um'
+        } else if (clNumero == 2) {
+            divMsg.innerHTML = 'Para esse o resto é dois'
+        } else if (clNumero == 3) {
+            divMsg.innerHTML = 'Com mais dois daria certo'
+        } else if (clNumero == 4) {
+            divMsg.innerHTML = 'Só faltou 1 para ser múltiplo de 5'
+        }
+    }
+</script>
+</html>

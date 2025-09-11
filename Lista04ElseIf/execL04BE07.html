@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04B - Exercicio 07</title>
+</head>
+<body>
+    <h3>Consumo de Calorias: Sua Dieta Está Saudável?</h3>
+    Quantos pães franceses tem comido por dia: <input id="iptPao"> <br>
+    Quantos pacotes de bolacha recheada tem comido por dia: <input id="iptBolacha"> <br>
+    Quantos copos de achocolatado tem tomado por dia: <input id="iptAchocolatado"> <br><br>
+    <button onclick="verificar()">Verificar Calorias</button> <br><br>
+    <div id="divMsg"></div>
+</body>
+<script>
+    function verificar() {
+        var pao = Number(iptPao.value);
+        var bolacha = Number(iptBolacha.value);
+        var achocolatado =  Number(iptAchocolatado.value);
+
+        var caloriaPao = pao * 50;
+        var caloriaBolacha = bolacha * 80;
+        var caloriaAchocolatado = achocolatado * 70;
+
+        var caloriaTotal = caloriaPao + caloriaBolacha + caloriaAchocolatado;
+
+        if (caloriaTotal < 200) {
+            divMsg.innerHTML =  caloriaTotal +  ' calorias' + ' , Parabéns, vai ficar em forma!'
+        } else if (caloriaTotal <= 400) {
+            divMsg.innerHTML = caloriaTotal + ' calorias' + ' , Cuidado, vai ficar menos saudável !'
+        } else {
+            divMsg.innerHTML = caloriaTotal + ' calorias' + ' , Alerta crítico de saúde !!!'
+        }
+
+    }
+</script>
+</html>

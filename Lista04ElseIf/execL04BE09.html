@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04B - Exercicio 09</title>
+</head>
+<body>
+    <h3>Índice de Massa Corporal (IMC)</h3>
+    Peso (kg) : <input id="iptPeso"> <br>
+    Altura (m): <input id="iptAltura"> <br><br>
+    <button onclick="imc()">Calcule o IMC</button> <br><br>
+    <div id="divMsg"></div>
+</body>
+<script>
+    function imc() {
+        var peso = Number(iptPeso.value);
+        var altura = Number(iptAltura.value);
+
+        var calcImc = peso / (altura * altura);
+
+        if (calcImc < 18.5) {
+            divMsg.innerHTML = '<b>Abaixo do peso'
+        } else if (calcImc <= 24.9) {
+            divMsg.innerHTML = '<b>Peso normal'
+        } else if (calcImc <= 29.9) {
+            divMsg.innerHTML = '<b>Acima do peso'
+        } else {
+            divMsg.innerHTML = '<b>Cuidado, risco de obesidade'
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04B - Exercicio 14</title>
+</head>
+<body>
+    <h3>Representação do humor do usuário </h3>
+    Selecione como você está se sentindo hoje (Opções: "Feliz", "Triste", "Bravo", "Surpreso", "Cansado") <br>
+    <input id="iptHumor"> <br><br>
+    <button onclick="mostrar()">Mostrar Humor</button> <br><br>
+    <div id="divMsg"></div>
+</body>
+<script>
+    function mostrar() {
+        if (iptHumor.value == 'Feliz') {
+            divMsg.innerHTML = '<h1>😊'
+        } else if (iptHumor.value == 'Triste') {
+            divMsg.innerHTML = '<h1>😢'
+        } else if (iptHumor.value == 'Bravo') {
+           divMsg.innerHTML = '<h1>😡' 
+        } else if (iptHumor.value == 'Surpreso') {
+            divMsg.innerHTML = '<h1>😲'
+        } else if (iptHumor.value == 'Cansado') {
+            divMsg.innerHTML = '<h1>😴'
+        }
+    }
+</script>
+</html>

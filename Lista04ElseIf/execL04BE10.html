@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04B - Exercicio 10</title>
+</head>
+<body>
+    <h3>Limite de Velocidade</h3>
+    Velocidade que você estava dirigindo (km/h): <input id="iptVelocidade"> <br>
+    Limite de velocidade da via (km/h): <input id="iptLimite"> <br><br>
+    <button onclick="verificar()">Verificar</button> <br><br>
+    <div id="divMsg"></div>
+</body>
+<script>
+    function verificar() {
+        var limite = Number(iptLimite.value);
+        var velocidade = Number(iptVelocidade.value);
+
+        var porcentagem = limite * 0.2;
+        var limitePorcentagem = limite + porcentagem;
+
+        if (velocidade <= limite) {
+            divMsg.innerHTML = 'Velocidade dentro do limite. Boa direção!'
+        } else if (velocidade <= limitePorcentagem) {
+            divMsg.innerHTML = 'Atenção! Excedendo o limite permitido'
+        } else {
+            divMsg.innerHTML = 'Multa grave! Velocidade muito acima do permitido'
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04B - Exercicio 06</title>
+</head>
+
+<body>
+    <h3>Times Paulistas: O Canto da Sua Torcida!</h3>
+    Digite seu time do coração: <input id="iptTime"> <br>
+    <button onclick="falar()">Fale sobre esse time</button> <br><br>
+    <div id="divMsg"></div>
+</body>
+<script>
+    function falar() {
+
+        if (iptTime.value == 'Santos') {
+            divMsg.innerHTML = '<h4 style="Background-color: white; color: black;">Agora quem dá a bola é o Santos'
+        } else if (iptTime.value == 'Corinthians') {
+            divMsg.innerHTML = '<h4 style="Background-color: black; color: white;">Salve o Corinthians'
+        } else if (iptTime.value == 'Palmeiras') {
+            divMsg.innerHTML = '<h4 style="Background-color: green; color: black;">Salve o alviverde imponente'
+        } else if (iptTime.value == 'São Paulo') {
+            divMsg.innerHTML = '<h4 style="Background-color: black; color: red;">Salve o Tricolor paulista'
+        } else if (iptTime.value == 'Juventus') {
+            divMsg.innerHTML = '<b style="Background-color: #A52A2A; color: white;">Moleque Travesso'
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04B - Exercicio 11</title>
+</head>
+<body>
+    <h3>Controle da umidade do ar</h3>
+    Umidade atual do ambiente: <input id="iptUmidade"> <br>
+    <button onclick="verificar()">Verificar a umidade</button> <br><br>
+    <div id="divMsg"></div>
+</body>
+<script>
+    function verificar() {
+        var umidade = Number(iptUmidade.value);
+
+        if (umidade < 0) {
+            alert ('Insira um valor válido de 0 a 100');
+        } else if (umidade > 100) {
+            alert('Insira um valor válido de 0 a 100');
+        } else if (umidade <= 12) {
+            divMsg.innerHTML = '<b>Estado de Emergencia' 
+        } else if (umidade <= 20) {
+            divMsg.innerHTML = '<b>Estado de Alerta' 
+        } else if (umidade <= 30) {
+            divMsg.innerHTML = '<b>Estado de Atenção' 
+        } else {
+            divMsg.innerHTML = '<b>Nenhum Risco' 
+        }
+
+    }
+</script>
+</html>

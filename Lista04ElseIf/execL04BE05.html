@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04B - Exercicio 05</title>
+</head>
+<body>
+    <h3>Classificação de Alunos: Como Está Seu Desempenho?</h3>
+    Nota média do aluno: <input id="iptNota"> <br><br>
+    <button onclick="classificar()">Classificar aluno</button> <br><br>
+    <div id="divMsg"></div>
+</body>
+<script>
+    function classificar() {
+        var media = Number(iptNota.value);
+
+        if (media < 5) {
+            divMsg.innerHTML = 'Aluno precisa de muita ajuda'
+        } else if (media <= 7) {
+            divMsg.innerHTML = 'Aluno na média'
+        } else if (media <= 9.5) {
+            divMsg.innerHTML = 'Aluno na acima da média'
+        } else {
+            divMsg.innerHTML = 'Aluno fora da curva'
+        }
+    }
+</script>
+</html>
